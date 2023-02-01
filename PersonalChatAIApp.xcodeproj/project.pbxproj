@@ -13,7 +13,7 @@
 		1FB51D8F298A9FEE003F6627 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB51D8E298A9FEE003F6627 /* Preview Assets.xcassets */; };
 		1FB51D97298AA038003F6627 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB51D96298AA038003F6627 /* OpenAISwift */; };
 		1FB51D99298AA078003F6627 /* PersonalChatAIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB51D98298AA078003F6627 /* PersonalChatAIViewModel.swift */; };
-		1FB51D9B298AD00E003F6627 /* ConfigSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB51D9A298AD00E003F6627 /* ConfigSecret.swift */; };
+		1FB51D9D298AFD62003F6627 /* ConfigSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB51D9C298AFD62003F6627 /* ConfigSecret.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		1FB51D8B298A9FEE003F6627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FB51D8E298A9FEE003F6627 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FB51D98298AA078003F6627 /* PersonalChatAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalChatAIViewModel.swift; sourceTree = "<group>"; };
-		1FB51D9A298AD00E003F6627 /* ConfigSecret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSecret.swift; sourceTree = "<group>"; };
+		1FB51D9C298AFD62003F6627 /* ConfigSecret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSecret.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				1FB51D87298A9FEB003F6627 /* PersonalChatAIAppApp.swift */,
 				1FB51D89298A9FEB003F6627 /* PersonalChatAIView.swift */,
 				1FB51D98298AA078003F6627 /* PersonalChatAIViewModel.swift */,
-				1FB51D9A298AD00E003F6627 /* ConfigSecret.swift */,
+				1FB51D9C298AFD62003F6627 /* ConfigSecret.swift */,
 				1FB51D8B298A9FEE003F6627 /* Assets.xcassets */,
 				1FB51D8D298A9FEE003F6627 /* Preview Content */,
 			);
@@ -152,7 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB51D8A298A9FEB003F6627 /* PersonalChatAIView.swift in Sources */,
-				1FB51D9B298AD00E003F6627 /* ConfigSecret.swift in Sources */,
+				1FB51D9D298AFD62003F6627 /* ConfigSecret.swift in Sources */,
 				1FB51D88298A9FEB003F6627 /* PersonalChatAIAppApp.swift in Sources */,
 				1FB51D99298AA078003F6627 /* PersonalChatAIViewModel.swift in Sources */,
 			);
