@@ -31,8 +31,7 @@ struct PersonalChatAIView: View {
             Spacer()
             HStack {
                 TextField("Type here...", text: $text)
-                    .lineLimit(3)
-                    .textFieldStyle(.plain)
+                    .textFieldStyle(.roundedBorder)
                 Button("Send") {
                     send()
                 }
