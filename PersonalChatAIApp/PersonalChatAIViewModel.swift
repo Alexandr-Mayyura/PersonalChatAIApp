@@ -8,13 +8,11 @@ import OpenAISwift
 import SwiftUI
 
 final class PersonalChatAIViewModel: ObservableObject {
-    init() {}
     
     private var client: OpenAISwift?
     
     func setup() {
         client = OpenAISwift(authToken: Token.myToken.rawValue)
-        
     }
     
     func send(text:String, completion: @escaping (String) -> Void) {

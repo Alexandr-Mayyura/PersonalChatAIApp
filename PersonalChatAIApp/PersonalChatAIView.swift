@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PersonalChatAIView: View {
     @ObservedObject var viewModel = PersonalChatAIViewModel()
-    @State var text = "Привет"
+    @State var text = ""
     @State var model = [String]()
     
     var body: some View {
@@ -51,7 +51,6 @@ struct PersonalChatAIView: View {
             DispatchQueue.main.async {
                 self.model.append(response)
                 self.text = ""
-                print(response)
             }
         }
     }
