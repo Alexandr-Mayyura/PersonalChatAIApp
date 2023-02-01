@@ -12,30 +12,32 @@ struct PersonalChatAIView: View {
     @State var text = "Привет"
     @State var model = [String]()
     
-    
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             ScrollView {
                 VStack(alignment: .leading) {
-                    ForEach(model, id: \.self) { string in
-                        
-                        Text(string)
-                        
+                    ForEach(model.indices, id: \.self) { string in
+                        Text(string % 2 == 1
+                             ? "ChatGPT:\(model[string])"
+                             : "Me:\(model[string])")
+                        .padding()
+                        .background(string % 2 == 1
+                                    ? Color("BlueColor")
+                                    : Color("GreenColor"))
+                        .cornerRadius(20)
                     }
                 }
-            
             }
             Spacer()
-            
             HStack {
                 TextField("Type here...", text: $text)
+                    .lineLimit(3)
+                    .textFieldStyle(.plain)
                 Button("Send") {
                     send()
                 }
             }
         }
-        
-        
         .onAppear{
             viewModel.setup()
         }
@@ -43,14 +45,11 @@ struct PersonalChatAIView: View {
     }
     
     func send() {
-        guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
-            return
-        }
-        
-        model.append("Me:\n\(text)\n")
+        guard !text.isEmpty else { return }
+        model.append("\n\(text)")
         viewModel.send(text: text) { response in
             DispatchQueue.main.async {
-                self.model.append("ChatGPT:\n" + response + "\n")
+                self.model.append(response)
                 self.text = ""
                 print(response)
             }
