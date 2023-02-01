@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FB51D88298A9FEB003F6627 /* PersonalChatAIAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB51D87298A9FEB003F6627 /* PersonalChatAIAppApp.swift */; };
-		1FB51D8A298A9FEB003F6627 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB51D89298A9FEB003F6627 /* ContentView.swift */; };
+		1FB51D8A298A9FEB003F6627 /* PersonalChatAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB51D89298A9FEB003F6627 /* PersonalChatAIView.swift */; };
 		1FB51D8C298A9FEE003F6627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB51D8B298A9FEE003F6627 /* Assets.xcassets */; };
 		1FB51D8F298A9FEE003F6627 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB51D8E298A9FEE003F6627 /* Preview Assets.xcassets */; };
 		1FB51D97298AA038003F6627 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB51D96298AA038003F6627 /* OpenAISwift */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		1FB51D84298A9FEB003F6627 /* PersonalChatAIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalChatAIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB51D87298A9FEB003F6627 /* PersonalChatAIAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalChatAIAppApp.swift; sourceTree = "<group>"; };
-		1FB51D89298A9FEB003F6627 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1FB51D89298A9FEB003F6627 /* PersonalChatAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalChatAIView.swift; sourceTree = "<group>"; };
 		1FB51D8B298A9FEE003F6627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FB51D8E298A9FEE003F6627 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FB51D98298AA078003F6627 /* PersonalChatAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalChatAIViewModel.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				1FB51D87298A9FEB003F6627 /* PersonalChatAIAppApp.swift */,
-				1FB51D89298A9FEB003F6627 /* ContentView.swift */,
+				1FB51D89298A9FEB003F6627 /* PersonalChatAIView.swift */,
 				1FB51D98298AA078003F6627 /* PersonalChatAIViewModel.swift */,
 				1FB51D9A298AD00E003F6627 /* ConfigSecret.swift */,
 				1FB51D8B298A9FEE003F6627 /* Assets.xcassets */,
@@ -151,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FB51D8A298A9FEB003F6627 /* ContentView.swift in Sources */,
+				1FB51D8A298A9FEB003F6627 /* PersonalChatAIView.swift in Sources */,
 				1FB51D9B298AD00E003F6627 /* ConfigSecret.swift in Sources */,
 				1FB51D88298A9FEB003F6627 /* PersonalChatAIAppApp.swift in Sources */,
 				1FB51D99298AA078003F6627 /* PersonalChatAIViewModel.swift in Sources */,

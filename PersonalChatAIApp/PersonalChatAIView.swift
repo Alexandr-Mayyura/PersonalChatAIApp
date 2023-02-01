@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PersonalChatAIView.swift
 //  PersonalChatAIApp
 //
 //  Created by Aleksandr Mayyura on 01.02.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PersonalChatAIView: View {
     @ObservedObject var viewModel = PersonalChatAIViewModel()
     @State var text = "Привет"
     @State var model = [String]()
@@ -60,6 +60,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PersonalChatAIView()
     }
 }
