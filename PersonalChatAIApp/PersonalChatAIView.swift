@@ -21,6 +21,7 @@ struct PersonalChatAIView: View {
                              ? "ChatGPT:\(model[string])"
                              : "Me:\(model[string])")
                         .padding()
+                        .foregroundColor(.black)
                         .background(string % 2 == 1
                                     ? Color("BlueColor")
                                     : Color("GreenColor"))
