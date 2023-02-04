@@ -21,7 +21,7 @@ struct PersonalChatAIView: View {
                     .bold()
                 Image("openAi")
                     .resizable()
-                    .frame(width: 80, height: 80)
+                    .frame(width: 50, height: 50)
             }
             ScrollView {
                 ForEach(messages, id: \.self) { message in
@@ -43,8 +43,8 @@ struct PersonalChatAIView: View {
                         }
                     } else {
                         let newMessage = message.replacingOccurrences(
-                            of: "\n",
-                            with: ""
+                            of: "\n\n",
+                            with: " "
                         )
                         HStack {
                             Text(newMessage)
