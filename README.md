@@ -1,5 +1,9 @@
-<img src="PersonalChatAIApp/Assets.xcassets/openAi.imageset/logo.png" width="50" height="50"/>    # PersonalChatAIApp 
+<p align="center">
+<img src="PersonalChatAIApp/Assets.xcassets/openAi.imageset/logo.png" width="80" height="80"/>   
+</p>
 
+# PersonalChatAIApp 
+ 
 ### Discription:
 It's a lightweight messenger with chatGPT, just ask a question and get an answer.</br>The framework used here is https://github.com/adamrushy/OpenAISwift
 </br>as well as a token from https://platform.openai.com/docs</br>
