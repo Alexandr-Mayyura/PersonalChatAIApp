@@ -14,7 +14,7 @@ This is a trial version and not much has been done here,</br>also note that ther
 
 
 <p align="center">
-<img src="Screenshot.png" width="150" height="300"/>                                                                                                                                  
+<img src="screeshot.png" width="150" height="300"/>                                                                                                                                  
 </p>
 
 
