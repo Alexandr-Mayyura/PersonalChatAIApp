@@ -1,5 +1,5 @@
 <p align="center">
-<img src="PersonalChatAIApp/Assets.xcassets/openAi.imageset/logo.png" width="80" height="80"/>   
+<img src="PersonalChatAIApp/Assets.xcassets/openAi.imageset/logo2.png" width="80" height="80"/>   
 </p>
 
 # PersonalChatAIApp 
