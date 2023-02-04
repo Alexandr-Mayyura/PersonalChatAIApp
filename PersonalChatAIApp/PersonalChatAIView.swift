@@ -21,7 +21,7 @@ struct PersonalChatAIView: View {
                     .bold()
                 Image("openAi")
                     .resizable()
-                    .frame(width: 120, height: 80)
+                    .frame(width: 80, height: 80)
             }
             ScrollView {
                 ForEach(messages, id: \.self) { message in
