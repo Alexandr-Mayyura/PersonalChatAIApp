@@ -12,7 +12,6 @@ struct PersonalChatAIView: View {
     @State var text = ""
     @State var messages = ["Hello, i am ChatGPT!"]
     
-    
     var body: some View {
         VStack {
             HStack {
