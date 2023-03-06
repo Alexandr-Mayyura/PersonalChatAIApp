@@ -86,7 +86,7 @@ struct PersonalChatAIView: View {
                     }
                     .font(.system(size: 26))
                     .padding(.horizontal, 10)
-                    
+                    .disabled(isOn)
                 }
                 .padding()
             }
