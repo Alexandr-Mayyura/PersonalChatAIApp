@@ -11,6 +11,7 @@ struct PersonalChatAIView: View {
     @ObservedObject var viewModel = PersonalChatAIViewModel()
     @State var text = ""
     @State var messages = ["Hello, i am ChatGPT!"]
+    @State var isOn = false
     
     var body: some View {
         VStack {
@@ -39,6 +40,7 @@ struct PersonalChatAIView: View {
                                 .cornerRadius(10)
                                 .padding(.horizontal, 16)
                                 .padding(.bottom, 10)
+                                
                         }
                     } else {
                         let newMessage = message.replacingOccurrences(
@@ -46,38 +48,48 @@ struct PersonalChatAIView: View {
                             with: " "
                         )
                         HStack {
-                            Text(newMessage)
-                                .padding()
-                                .foregroundColor(Color.black)
-                                .background(Color("BlueColor"))
-                                .cornerRadius(10)
-                                .padding(.horizontal, 16)
-                                .padding(.bottom, 10)
-                            Spacer()
-                        }
+                                Text(newMessage)
+                                    .padding()
+                                    .foregroundColor(Color.black)
+                                    .background(Color("BlueColor"))
+                                    .cornerRadius(10)
+                                    .padding(.horizontal, 16)
+                                    .padding(.bottom, 10)
+                                Spacer()
+                            }
+                        
                     }
                 } .rotationEffect(.degrees(180))
             }
             .rotationEffect(.degrees(180))
-            
-            HStack {
-                TextField("Type here...", text: $text)
-                    .padding()
-                    .background(Color.gray.opacity(0.1))
-                    .cornerRadius(10)
-                    .onSubmit {
-                        send(message: text)
+            .textSelection(.enabled)
+            VStack {
+                HStack {
+                    if isOn {
+                        ProgressView()
+                            .padding(.leading, 30)
                     }
-                Button {
-                    send(message: text)
-                } label: {
-                    Image(systemName: "paperplane.fill")
+                    Spacer()
                 }
-                .font(.system(size: 26))
-                .padding(.horizontal, 10)
-
+                HStack {
+                    TextField("Type here...", text: $text)
+                        .padding()
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(10)
+                        .onSubmit {
+                            send(message: text)
+                        }
+                    Button {
+                        send(message: text)
+                    } label: {
+                        Image(systemName: "paperplane.fill")
+                    }
+                    .font(.system(size: 26))
+                    .padding(.horizontal, 10)
+                    
+                }
+                .padding()
             }
-            .padding()
         }
         .onAppear {
             viewModel.setup()
@@ -87,11 +99,13 @@ struct PersonalChatAIView: View {
     func send(message: String) {
         withAnimation {
             guard !message.isEmpty else { return }
+            isOn = true
             messages.append("[USER]" + message)
             text = ""
             viewModel.send(text: message) { response in
                 DispatchQueue.main.async {
                     withAnimation {
+                        isOn.toggle()
                         messages.append(response)
                     }
                 }
